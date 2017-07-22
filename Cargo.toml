@@ -1,0 +1,17 @@
+[package]
+name = "lpc810-demo"
+version = "0.1.0"
+authors = ["William D. Jones <thorr0505@comcast.net>"]
+
+[dependencies]
+cortex-m = "0.3.x"
+
+[dependencies.cortex-m-rt]
+features=["abort-on-panic"]
+
+[dependencies.lpc81x]
+path = "../lpc81x"
+features = ["rt"]
+
+[profile.release]
+lto = true
